@@ -3,7 +3,7 @@ class PriorityQueue(object):
 
     Attributes:
         array: An array of tuples to store data. The position of a tuple
-            implicitly satisfies the rolf of pointers. Array index starts at 1
+            implicitly satisfies the role of pointers. Array index starts at 1
             to simplify matters. The root of the tree is stored in the first
             position of the array.
     """
