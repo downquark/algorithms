@@ -10,5 +10,6 @@ def step_impl(context):
     
 @then('the square root should be returned')
 def step_impl(context):
-    assert context.number == round(context.result ** 2)
-    #'square root is not as expected')
+    result = round(context.result ** 2)
+    print 'result {0} {1}'.format(context.number, result)
+    assert context.number == result

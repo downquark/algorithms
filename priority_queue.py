@@ -44,7 +44,7 @@ class PriorityQueue(object):
         self.__print()
 
     def __bubble_down(self, new):
-        child = 2*new
+        child = 2 * new
         min_index = new
         for i in range(2):
             if child + i <= len(self.array) - 1:
@@ -66,7 +66,7 @@ class PriorityQueue(object):
         return self.array[parent][0] > self.array[new][0]
 
     def __parent(self, key):
-        return -1 if key == 1 else int(key/2) # implicitly take floor(key/2)
+        return -1 if key == 1 else int(key / 2) # implicitly take floor(key/2)
 
     def __print(self):
         if len(self.array) > 1:

@@ -26,7 +26,7 @@ class IntArray(object):
         y_1 = IntArray([y.array.pop(0)], self.base)
         r = x_1.array[0] * y_1.array[0]
         z_2 = IntArray([r % self.base], self.base)
-        carry = int(r/self.base)
+        carry = int(r / self.base)
         if carry: z_2.array.insert(0, carry)
         if m == 0:
             return z_2
@@ -54,7 +54,7 @@ class IntArray(object):
         for i in range(len(x.array) - 1, -1, -1):
             r = x.array[i] + self.array[i] + carry
             result.array.insert(0, r % self.base)
-            carry = int(r/self.base)
+            carry = int(r / self.base)
         if carry: result.array.insert(0, carry)
         if len(result.array) > 1 and not r: result.array.pop(0)
         print '{0} + {1} = {2}'.format(self.array, x.array, result.array)
@@ -66,7 +66,7 @@ class IntArray(object):
         while len(self.array) > len(x.array):
             x.array.insert(0, 0)
         if abs(self.array[0]) >= abs(x.array[0]):
-            result = self + (-x)
+            result = self +(-x)
         else:
             result = -(-self + x)
         print '{0} - {1} = {2}'.format(self.array, x.array, result.array)
